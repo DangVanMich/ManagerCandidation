@@ -1,14 +1,6 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-package controller;
 
-/**
- *
- * @author admin
- */
-import java.util.ArrayList;
+package model;
+
 
 public class Candidate {
     private String id;
@@ -19,8 +11,8 @@ public class Candidate {
     private String phone;
     private String email;
     private int typeCandidate;
-
-    public Candidate() {
+    
+    public Candidate(){  
     }
 
     public Candidate(String id, String firstName, String lastName, int birthDate, String address, String phone, String email, int typeCandidate) {
@@ -97,12 +89,8 @@ public class Candidate {
     public void setTypeCandidate(int typeCandidate) {
         this.typeCandidate = typeCandidate;
     }
-
-    @Override
-    public String toString() {
-        return this.firstName + this.lastName + "|" + this.birthDate + "|"
-                + this.address + "|" + this.phone + "|" + this.email + "|"
-                + this.typeCandidate;
-    }
     
+    public String toString(){
+        return String.format("%-5s | %-5s | %-5s | %-5s | %-10s | %-5s | %s", this.firstName,this.birthDate, this.lastName, this.address, this.phone, this.email, this.typeCandidate);
+    }
 }

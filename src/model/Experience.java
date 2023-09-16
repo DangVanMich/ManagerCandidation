@@ -4,44 +4,44 @@
  */
 package model;
 
-import controller.Candidate;
+import java.time.LocalDate;
 
 /**
  *
- * @author admin
+ * @author This PC
  */
-public class Experience extends Candidate {
-
-    private int yearExperience;
-    private String professionalSkill;
-
+public class Experience extends Candidate{
+    private int expInYear;
+    private String proSkill;
+    
     public Experience() {
         super();
     }
-
-    public Experience(int yearExperience, String professionalSkill,
-            String id, String firstName, String lastName, int birthDate,
-            String address, String phone, String email, int typeCandidate) {
-        super(id, firstName, lastName, birthDate, address, phone, email,
-                typeCandidate);
-        this.yearExperience = yearExperience;
-        this.professionalSkill = professionalSkill;
+    
+    public Experience(String id, String firstName, String lastName, int birthDate, String address, String phone, String email, int typeCadidate,
+            int expInyear, String proSkill){
+        super(id,firstName,lastName,birthDate,address,phone,email,typeCadidate);
+        this.expInYear= expInyear;
+        this.proSkill= proSkill;
     }
 
-    public int getYearExperience() {
-        return yearExperience;
+    public int getExpInYear() {
+        return expInYear;
     }
 
-    public void setYearExperience(int yearExperience) {
-        this.yearExperience = yearExperience;
+    public void setExpInYear(int expInYear) {
+        this.expInYear = expInYear;
     }
 
-    public String getProfessionalSkill() {
-        return professionalSkill;
+    public String getProSkill() {
+        return proSkill;
     }
 
-    public void setProfessionalSkill(String professionalSkill) {
-        this.professionalSkill = professionalSkill;
+    public void setProSkill(String proSkill) {
+        this.proSkill = proSkill;
     }
-
+    
+    
+    
+    
 }

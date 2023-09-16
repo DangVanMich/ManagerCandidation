@@ -4,30 +4,29 @@
  */
 package model;
 
-import controller.Candidate;
+import java.time.LocalDate;
+
+
 
 /**
  *
- * @author admin
+ * @author This PC
  */
-public class Internship extends Candidate {
-
+public class Intern extends Candidate{
     private String major;
     private String semester;
     private String university;
-
-    public Internship() {
+    
+    public Intern() {
         super();
     }
-
-    public Internship(String major, String semester, String university,
-            String id, String firstName, String lastName, int birthDate,
-            String address, String phone, String email, int typeCandidate) {
-        super(id, firstName, lastName, birthDate, address, phone, email,
-                typeCandidate);
-        this.major = major;
-        this.semester = semester;
-        this.university = university;
+    
+    public Intern(String id, String firstName, String lastName, int birthDate, String address, String phone, String email, int typeCadidate,
+            String major, String semester, String university){
+        super(id,firstName,lastName,birthDate,address,phone,email,typeCadidate);
+        this.major= major;
+        this.semester= semester;
+        this.university= university;
     }
 
     public String getMajor() {
@@ -53,4 +52,6 @@ public class Internship extends Candidate {
     public void setUniversity(String university) {
         this.university = university;
     }
+    
+    
 }
